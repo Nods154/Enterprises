@@ -1,0 +1,31 @@
+
+    <!-- "Return to Top" button -->
+    <button onclick="topFunction()" id="return-to-top" title="Return to Top">
+        &#8593;
+        <span class="label">Back to Top</span>
+    </button>
+
+    <script>
+        // Get the button element
+        var returnBtn = document.getElementById("return-to-top");
+
+        // When the user scrolls down a certain distance from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                returnBtn.style.display = "block";
+            } else {
+                returnBtn.style.display = "none";
+            }
+        }
+
+        // When the button is clicked, scroll back to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
